@@ -1,0 +1,26 @@
+#!/bin/bash
+# at each BT connection/disconnection do something
+
+su -l morro 	#change to your user
+
+BLUETOOTH_LOG=/var/log/bluetooth_dev
+KEYSTROKE="ctrl+z"
+export DISPLAY=':0.0'
+export XAUTHORITY="/run/user/1000/gdm/Xauthority" #obtained by simply running "xauth"
+XDOTOOL="/usr/bin/xdotool"
+
+function log {
+	echo "[$(date)]: $*" >> $BLUETOOTH_LOG
+}
+
+if [ $ACTION = "remove" ]
+then
+        log "Device disconnected"
+elif [ $ACTION = "add" ]
+then
+	log "Device connected"
+	winid=$($XDOTOOL getwindowfocus) &>> $BLUETOOTH_LOG
+	$XDOTOOL windowactivate $winid ; $XDOTOOL key $KEYSTROKE &>> $BLUETOOTH_LOG
+else
+        log "Other action "
+fi

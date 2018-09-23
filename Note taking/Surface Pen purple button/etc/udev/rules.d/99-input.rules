@@ -1,0 +1,2 @@
+#OBVIOUSLY PAIR your device first, and replace its mac address down here:
+ACTION=="add", SUBSYSTEM=="bluetooth", ATTR{address}="E2:E5:16:DC:69:6C", RUN+="/usr/lib/udev/bluetooth"
