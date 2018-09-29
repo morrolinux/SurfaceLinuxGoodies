@@ -4,12 +4,15 @@ rotate="/usr/local/bin/rotate-all.sh"
 current="none"
 lastr="none"
 
+accelx=$(find /sys/devices/ -iname "*in_accel_x_raw*")
+accely=$(find /sys/devices/ -iname "*in_accel_y_raw*")
+
 while true; do
 
 	sleep 1
 	
-	commandx=$(cat /sys/bus/iio/devices/iio\:device0/in_accel_x_raw)
-	commandy=$(cat /sys/bus/iio/devices/iio\:device0/in_accel_y_raw)
+	commandx=$(cat $accelx)
+	commandy=$(cat $accely)
 	
 	if [[ $commandx -gt 500 ]] && [[ $commandx -lt 1020 ]]
 	then
