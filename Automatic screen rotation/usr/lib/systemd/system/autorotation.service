@@ -1,0 +1,11 @@
+[Unit]
+Description=Autorotation service
+#After=graphical.target
+
+[Service]
+#EnvironmentFile=/etc/conf.d/sensord
+Type=simple
+ExecStart=/usr/local/bin/autorotate.sh
+
+[Install]
+WantedBy=graphical.target
