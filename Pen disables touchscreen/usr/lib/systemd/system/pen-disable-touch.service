@@ -1,0 +1,10 @@
+[Unit]
+Description=Determine weather the pen is hovering the screen and disable the touch if so
+After=graphical.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/pen-disable-touch.sh
+
+[Install]
+WantedBy=default.target
