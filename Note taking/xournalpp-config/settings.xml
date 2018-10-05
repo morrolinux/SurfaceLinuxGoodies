@@ -4,8 +4,8 @@
   <property name="useXinput" value="true"/>
   <property name="presureSensitivity" value="false"/>
   <property name="ignoreCoreEvents" value="false"/>
-  <property name="selectedToolbar" value="Toolbar Left Copy"/>
-  <property name="lastSavePath" value="file:///home/user"/>
+  <property name="selectedToolbar" value="Toolbar Left"/>
+  <property name="lastSavePath" value="file:///home/morro/Scrivania/1S/Dinamici/appunti"/>
   <property name="lastImagePath" value=""/>
   <property name="displayDpi" value="72"/>
   <property name="mainWndWidth" value="800"/>
@@ -13,12 +13,12 @@
   <property name="maximized" value="true"/>
   <property name="showSidebar" value="false"/>
   <property name="sidebarWidth" value="150"/>
-  <property name="sidebarOnRight" value="false"/>
-  <property name="scrollbarOnLeft" value="false"/>
+  <property name="sidebarOnRight" value="true"/>
+  <property name="scrollbarOnLeft" value="true"/>
   <property name="showTwoPages" value="false"/>
   <property name="presentationMode" value="false"/>
   <!--Which gui elements are hidden if you are in Fullscreen mode, separated by a colon (,)-->
-  <property name="fullscreenHideElements" value="mainMenubar"/>
+  <property name="fullscreenHideElements" value="mainMenubar,sidebarContents"/>
   <!--Which gui elements are hidden if you are in Presentation mode, separated by a colon (,)-->
   <property name="presentationHideElements" value="mainMenubar,sidebarContents"/>
   <property name="showBigCursor" value="false"/>
@@ -30,7 +30,7 @@
   <property name="visiblePageFormats" value="iso_a4,iso_a5,na_letter,na_legal"/>
   <property name="autosaveEnabled" value="true"/>
   <property name="autosaveTimeout" value="1"/>
-  <property name="addHorizontalSpace" value="false"/>
+  <property name="addHorizontalSpace" value="true"/>
   <property name="addVerticalSpace" value="false"/>
   <property name="fixXinput" value="false"/>
   <!--If Xournal crashes if you e.g. unplug your mouse set this to true. If you have input problems, you can turn it of with false.-->
@@ -44,14 +44,14 @@
   <property name="widthMinimumMultiplier" value="0,000"/>
   <!--The multiplier for the pressure sensitivity of the pen-->
   <property name="widthMaximumMultiplier" value="1,000"/>
-  <property name="font" font="Sans" size="12,0"/>
+  <property name="font" font="Sans" size="10,0"/>
   <data name="buttonConfig">
     <data name="default">
       <attribute name="arrow" type="boolean" value="false"/>
-      <attribute name="changeRulerShapeRecognizer" type="boolean" value="true"/>
+      <attribute name="changeRulerShapeRecognizer" type="boolean" value="false"/>
       <attribute name="circle" type="boolean" value="false"/>
       <attribute name="color" type="hex" value="000000"/>
-      <attribute name="rectangle" type="boolean" value="true"/>
+      <attribute name="rectangle" type="boolean" value="false"/>
       <attribute name="ruler" type="boolean" value="false"/>
       <attribute name="shapeRecognizer" type="boolean" value="false"/>
       <attribute name="size" type="string" value="medium"/>
@@ -65,7 +65,8 @@
       <attribute name="tool" type="string" value="eraser"/>
     </data>
     <data name="right">
-      <attribute name="tool" type="string" value="selectRegion"/>
+      <attribute name="eraserMode" type="string" value="none"/>
+      <attribute name="tool" type="string" value="eraser"/>
     </data>
     <data name="touch">
       <attribute name="device" type="string" value="NTRG0001:01 1B96:1B05"/>
@@ -77,22 +78,21 @@
   <data name="format">
     <attribute name="paperformat" type="string" value="system"/>
   </data>
-  <data name="lastUsedPageBgColor"/>
   <data name="tools">
     <attribute name="current" type="string" value="pen"/>
     <data name="eraser">
-      <attribute name="size" type="string" value="MEDIUM"/>
+      <attribute name="size" type="string" value="THIN"/>
       <attribute name="type" type="string" value="deleteStroke"/>
     </data>
     <data name="hand"/>
     <data name="hilighter">
       <attribute name="arrow" type="boolean" value="false"/>
       <attribute name="circle" type="boolean" value="false"/>
-      <attribute name="color" type="hex" value="ffeb7d"/>
+      <attribute name="color" type="hex" value="ffff00"/>
       <attribute name="rectangle" type="boolean" value="false"/>
-      <attribute name="ruler" type="boolean" value="false"/>
+      <attribute name="ruler" type="boolean" value="true"/>
       <attribute name="shapeRecognizer" type="boolean" value="false"/>
-      <attribute name="size" type="string" value="MEDIUM"/>
+      <attribute name="size" type="string" value="BIG"/>
     </data>
     <data name="image"/>
     <data name="pen">
@@ -101,7 +101,7 @@
       <attribute name="color" type="hex" value="000000"/>
       <attribute name="rectangle" type="boolean" value="false"/>
       <attribute name="ruler" type="boolean" value="false"/>
-      <attribute name="shapeRecognizer" type="boolean" value="true"/>
+      <attribute name="shapeRecognizer" type="boolean" value="false"/>
       <attribute name="size" type="string" value="MEDIUM"/>
     </data>
     <data name="selectObject"/>
