@@ -10,14 +10,14 @@ Be aware for some reason the pen must be paired each time upon reboot.
 
 The default action I choose is to send CTRL+z to the active window, which is helping alot with note taking.
 
+## pen disable touchscreen
+Contains a script and a service (which must be enabled of course) for disabling the touchscreen when the Surface Pen is hovering on the screen. Useful for improved palm rejection.
+
 ## xournalpp-config 
 Is just a set of settings I'm comfortable with in xournal++ (autosave settings, custom toolbars, etc...)
 
 ## config-wacom-libinput
 Contains my X11 configuration for using libinput driver for both Touchpad and Touchscreen, while keep using wacom driver for the pen.
-
-## pen disable touchscreen
-Contains a script and a service (which must be enabled of course) for disabling the touchscreen when the Surface Pen is hovering on the screen. Useful for improved palm rejection.
 
 # General usage
 
