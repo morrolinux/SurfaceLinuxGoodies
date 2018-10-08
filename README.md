@@ -26,3 +26,6 @@ Contains a script and a service (which must be enabled of course) for making it 
 
 ## Enable vsync
 On integrated Intel gfx, vsync might not be enabled by default. Hence, we see this 'tearing' effect when scrolling contents. 
+
+## Wi-Fi restart switch
+On the Surface Pro 3 (among few others) the wifi kernel drivers are a bit buggy. When launched, this script reloads the kernel module, effectively restarting connectivity (most of the times)
