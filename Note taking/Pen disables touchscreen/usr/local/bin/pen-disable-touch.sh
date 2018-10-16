@@ -20,16 +20,9 @@ while true; do
 	
 	isPenHovering=$(xinput list-props "$deviceName"|grep "$deviceProp"|cut -d, -f 4|cut -c 2)
 
-	if [[ $isPenHovering != "0" ]]
+	if [[ $laste != $isPenHovering ]]
 	then
-		currente="0"
-	else
-		currente="1"
-	fi
-
-	if [[ $laste != $currente ]]
-	then
-		xinput set-prop "NTRG0001:01 1B96:1B05" "Device Enabled" $currente
-		laste=$currente
+		xinput set-prop "NTRG0001:01 1B96:1B05" "Device Enabled" !$isPenHovering
+		laste = $isPenHovering
 	fi
 done
