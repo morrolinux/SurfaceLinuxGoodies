@@ -1,0 +1,11 @@
+[Unit]
+Description=Bluetooth auto reconnection service for Surface Pen
+After=graphical.target bluetooth.service
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sleep 5
+ExecStart=/usr/local/bin/autoconnect-script.sh
+
+[Install]
+WantedBy=default.target
