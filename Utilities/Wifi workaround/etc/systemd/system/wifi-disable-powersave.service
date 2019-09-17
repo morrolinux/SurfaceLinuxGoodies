@@ -1,0 +1,9 @@
+[Unit]
+Description=Disabling wifi power save
+
+[Service]
+ExecStart=/usr/local/bin/wifi-disable-powersave.sh
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target
